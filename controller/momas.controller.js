@@ -11,18 +11,17 @@ const postData = {
   // Add your POST data here if needed
 };
 
-function getAuthToken() {
+// Function to get authentication token
+async function getAuthToken() {
   console.log('works')
-  axios
-    .post(endpoint, postData)
-    .then((response) => {
-      // Handle successful response
-      console.log("Response:", response.data);
-    })
-    .catch((error) => {
-      // Handle error
-      console.error("Error:", error);
-    });
+  try {
+    const response = await axios.post(endpoint, postData);
+    console.log("Response:", response.data);
+    return response.data; // Return data if needed
+  } catch (error) {
+    console.error("Error:", error);
+    throw error; // Rethrow error for further handling if needed
+  }
 }
 
 module.exports = {

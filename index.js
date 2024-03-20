@@ -1,11 +1,17 @@
 const express = require("express");
-
 const app = express();
 
+// Importing routes
+const momasRoutes = require("./routes/momas.routes");
 
+// Registering routes
+app.use("/momas", momasRoutes);
 
+// Define a default route
 app.get("/", (req, res) => res.json("My API is running"));
 
-app.use("/momas", require("./routes/momas.routes"));
-
-app.listen(5001, console.log("API running on 5001"));
+// Start the server
+const port = 5001;
+app.listen(port, () => {
+  console.log(`API running on port ${port}`);
+});
