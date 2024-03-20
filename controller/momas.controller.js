@@ -15,7 +15,7 @@ const postData = {
 async function getAuthToken() {
   console.log('works')
   try {
-    const response = await axios.post(`${endpoint}/${merchantId}/${password}`, postData);
+    const response = await axios.post(`${endpoint}${merchantId}/${password}`, postData);
     console.log("Response:", response.data);
     return response.data; // Return data if needed
   } catch (error) {
@@ -27,7 +27,7 @@ async function getAuthToken() {
 async function getCredentials() {
   console.log('cred')
   try {
-    const response = await axios.post(`${endpoint}/${merchantId}`, postData);
+    const response = await axios.post(`${endpoint}${merchantId}`, postData);
     console.log("Response:", response.data);
     return response.data; // Return data if needed
   } catch (error) {
