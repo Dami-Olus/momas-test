@@ -3,8 +3,11 @@ const axios = require("axios");
 // Replace these placeholders with actual values
 const merchantId = 101;
 const password = 123456;
+const authToken = FD1C26E8D2C78A42465E90D855A0B5C1
 
 const endpoint = "http://41.216.166.163:8080/memmcol-ami-service/api/auth/";
+
+const endpointProfile = "http://41.216.166.163:59216/memmcol-ami-service/api/profile/all/ldpi/"
 
 // Data to send in the POST request, if needed
 const postData = {
@@ -36,8 +39,23 @@ async function getCredentials() {
   }
 }
 
+async function getInstProfData() {
+  console.log('profData');
+  try {
+    const response = await axios.get(`${endpointProfile}${merchantId}/${authToken}`, postData);
+    console.log("Response:", response.data);
+    return response.data; // Return data if needed
+  } catch (error) {
+    console.error("Error:", error);
+    throw error; // Rethrow error for further handling if needed
+  }
+}
+
+
+
 
 module.exports = {
   getAuthToken,
   getCredentials,
+  getInstProfData,
 }
