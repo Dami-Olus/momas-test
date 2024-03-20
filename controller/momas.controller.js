@@ -27,7 +27,7 @@ async function getAuthToken() {
 async function getCredentials() {
   console.log('cred')
   try {
-    const response = await axios.post(`${endpoint}${merchantId}`, postData);
+    const response = await axios.get(`${endpoint}${merchantId}`, postData);
     console.log("Response:", response.data);
     return response.data; // Return data if needed
   } catch (error) {
@@ -36,7 +36,6 @@ async function getCredentials() {
   }
 }
 
-http://41.216.166.163:59216/memmcol-ami-service/api/auth/{merchant_id}
 
 module.exports = {
   getAuthToken,
