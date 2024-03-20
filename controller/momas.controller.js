@@ -4,7 +4,7 @@ const axios = require("axios");
 const merchantId = 101;
 const password = 123456;
 
-const endpoint = `http://41.216.166.163:59216/memmcol-ami-service/api/auth/${merchantId}/${password}`;
+const endpoint = `http://41.216.166.163:8080/memmcol-ami-service/api/auth/${merchantId}/${password}`;
 
 // Data to send in the POST request, if needed
 const postData = {
