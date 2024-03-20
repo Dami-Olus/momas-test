@@ -12,6 +12,7 @@ const postData = {
 };
 
 function getAuthToken() {
+  console.log('works')
   axios
     .post(endpoint, postData)
     .then((response) => {
