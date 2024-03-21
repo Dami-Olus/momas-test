@@ -13,7 +13,7 @@ const endpointAll =
 const endpointRange =
   "http://41.216.166.163:8080/memmcol-ami-service/api/profile/range/ldpi/";
 
-const endpointEnergyAll = 'http://41.216.166.163:59216/memmcol-ami-service/api/profile/all/ldpd/';
+const endpointEnergyAll = 'http://41.216.166.163:8080/memmcol-ami-service/api/profile/all/ldpd/';
 
 let startDate = "2024-02-13";
 let endDate = "2024-02-21";
