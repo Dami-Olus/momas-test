@@ -15,7 +15,7 @@ const endpointRange =
 
 const endpointEnergyAll = 'http://41.216.166.163:8080/memmcol-ami-service/api/profile/all/ldpd/';
 
-const endpointBillingAll = 'http://41.216.166.163:8080/memmcol-ami-service/api/profile/all/debd'
+const endpointBillingAll = 'http://41.216.166.163:8080/memmcol-ami-service/api/profile/all/debd/'
 
 let startDate = "2024-02-13";
 let endDate = "2024-02-21";
