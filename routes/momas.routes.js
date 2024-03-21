@@ -7,6 +7,7 @@ router.get("/cred", momasController.getCredentials);
 router.get('/profileData', momasController.getInstProfData);
 router.get('/dataByDate', momasController.getInstDataByDate);
 router.get('/modelData', momasController.getInstDataByModel);
+router.get('/energy', momasController.getEnergyDemandData);
 
 
 module.exports = router;
