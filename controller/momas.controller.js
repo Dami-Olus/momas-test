@@ -11,8 +11,8 @@ const endpointProfile = "http://41.216.166.163:8080/memmcol-ami-service/api/prof
 
 const endpointRange = "http://41.216.166.163:8080/memmcol-ami-service/api/profile/range/ldpi/";
 
-startDate = '2024-03-13'
-endDate = '2024-03-21'
+startDate = '2024-02-13'
+endDate = '2024-02-21'
 
 // Data to send in the POST request, if needed
 const postData = {
