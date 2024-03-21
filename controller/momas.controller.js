@@ -15,6 +15,8 @@ const endpointRange =
 
 const endpointEnergyAll = 'http://41.216.166.163:8080/memmcol-ami-service/api/profile/all/ldpd/';
 
+const endpointBillingAll = 'http://41.216.166.163:8080/memmcol-ami-service/api/profile/all/debd'
+
 let startDate = "2024-02-13";
 let endDate = "2024-02-21";
 let meterModel = 1;
@@ -114,6 +116,23 @@ async function getEnergyDemandData() {
   }
 }
 
+async function getBillingDataAll() {
+  console.log("billingData");
+  try {
+    const response = await axios.get(
+      `${endpointBillingAll}${merchantId}/${authToken}`,
+      postData
+    );
+    console.log("Response:", response.data);
+    return response.data; // Return data if needed
+  } catch (error) {
+    console.error("Error:", error);
+    throw error; // Rethrow error for further handling if needed
+  }
+}
+
+
+
 module.exports = {
   getAuthToken,
   getCredentials,
@@ -121,4 +140,5 @@ module.exports = {
   getInstDataByDate,
   getInstDataByModel,
   getEnergyDemandData,
+  getBillingDataAll,
 };
