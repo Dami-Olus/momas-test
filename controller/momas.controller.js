@@ -59,7 +59,7 @@ async function getInstProfData() {
 async function getInstDataByDate() {
   console.log('profData');
   try {
-    const response = await axios.get(`${endpointProfile}${merchantId}/${authToken}/${startDate}/${endDate}`, postData);
+    const response = await axios.get(`${endpointRange}${merchantId}/${authToken}/${startDate}/${endDate}`, postData);
     console.log("Response:", response.data);
     return response.data; // Return data if needed
   } catch (error) {
