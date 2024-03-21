@@ -9,6 +9,9 @@ const endpoint = "http://41.216.166.163:8080/memmcol-ami-service/api/auth/";
 
 const endpointProfile = "http://41.216.166.163:8080/memmcol-ami-service/api/profile/all/ldpi/"
 
+startDate = '2024-03-13'
+endDate = '2024-03-21'
+
 // Data to send in the POST request, if needed
 const postData = {
   // Add your POST data here if needed
@@ -51,6 +54,20 @@ async function getInstProfData() {
   }
 }
 
+async function getInstDataByDate() {
+  console.log('profData');
+  try {
+    const response = await axios.get(`${endpointProfile}${merchantId}/${authToken}/${startDate}/${endDate}`, postData);
+    console.log("Response:", response.data);
+    return response.data; // Return data if needed
+  } catch (error) {
+    console.error("Error:", error);
+    throw error; // Rethrow error for further handling if needed
+  }
+}
+
+
+
 
 
 
@@ -58,4 +75,5 @@ module.exports = {
   getAuthToken,
   getCredentials,
   getInstProfData,
+  getInstDataByDate,
 }
