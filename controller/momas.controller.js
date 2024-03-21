@@ -7,7 +7,9 @@ const authToken = 'FD1C26E8D2C78A42465E90D855A0B5C1'
 
 const endpoint = "http://41.216.166.163:8080/memmcol-ami-service/api/auth/";
 
-const endpointProfile = "http://41.216.166.163:8080/memmcol-ami-service/api/profile/all/ldpi/"
+const endpointProfile = "http://41.216.166.163:8080/memmcol-ami-service/api/profile/all/ldpi/";
+
+const endpointRange = "http://41.216.166.163:8080/memmcol-ami-service/api/profile/range/ldpi/";
 
 startDate = '2024-03-13'
 endDate = '2024-03-21'
