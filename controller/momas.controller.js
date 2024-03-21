@@ -13,6 +13,8 @@ const endpointAll =
 const endpointRange =
   "http://41.216.166.163:8080/memmcol-ami-service/api/profile/range/ldpi/";
 
+const endpointEnergyAll = 'http://41.216.166.163:59216/memmcol-ami-service/api/profile/all/ldpd/';
+
 let startDate = "2024-02-13";
 let endDate = "2024-02-21";
 let meterModel = 1;
@@ -95,10 +97,28 @@ async function getInstDataByModel() {
   }
 }
 
+
+
+async function getEnergyDemandData() {
+  console.log("energyData");
+  try {
+    const response = await axios.get(
+      `${endpointEnergyAll}${merchantId}/${authToken}`,
+      postData
+    );
+    console.log("Response:", response.data);
+    return response.data; // Return data if needed
+  } catch (error) {
+    console.error("Error:", error);
+    throw error; // Rethrow error for further handling if needed
+  }
+}
+
 module.exports = {
   getAuthToken,
   getCredentials,
   getInstProfData,
   getInstDataByDate,
   getInstDataByModel,
+  getEnergyDemandData,
 };
