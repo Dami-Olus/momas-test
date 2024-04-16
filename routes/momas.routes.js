@@ -9,6 +9,8 @@ router.get('/dataByDate', momasController.getInstDataByDate);
 router.get('/modelData', momasController.getInstDataByModel);
 router.get('/energy', momasController.getEnergyDemandData);
 router.get('/billing', momasController.getBillingDataAll);
+router.get('/accountverify', momasController.verifyAccount)
+router.get('/energy_md', momasController.getMdEnergyDemandData)
 
 
 module.exports = router;
