@@ -11,6 +11,6 @@ router.get('/energy', momasController.getEnergyDemandData);
 router.get('/billing', momasController.getBillingDataAll);
 router.get('/accountverify', momasController.verifyAccount)
 router.get('/energy_md', momasController.getMdEnergyDemandData)
-
+router.get('/md_data', momasController.getMdData)
 
 module.exports = router;
