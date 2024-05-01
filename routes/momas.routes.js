@@ -12,5 +12,6 @@ router.get('/billing', momasController.getBillingDataAll);
 router.get('/accountverify', momasController.verifyAccount)
 router.get('/energy_md', momasController.getMdEnergyDemandData)
 router.get('/md_data', momasController.getMdData)
+router.post('/payment', momasController.paymentNotification)
 
 module.exports = router;
