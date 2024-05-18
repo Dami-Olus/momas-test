@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 
+
+app.use(express.json());
+
 // Importing routes
 const momasRoutes = require("./routes/momas.routes");
 
