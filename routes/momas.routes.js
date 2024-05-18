@@ -13,7 +13,7 @@ router.get('/accountverify', momasController.verifyAccount)
 router.get('/energy_md', momasController.getMdEnergyDemandData)
 router.get('/md_data', momasController.getMdData)
 router.get('/md_data_range', momasController.getMdDataRange)
-router.post('/payment', momasController.paymentNotification)
+// router.post('/payment', momasController.paymentNotification)
 router.post('/callAWS', momasController.callAWS)
 
 module.exports = router;
